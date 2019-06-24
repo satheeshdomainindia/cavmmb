@@ -26,3 +26,14 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::get('/git', function () {
+    $data   = [];
+    
+    $data[] = shell_exec('git pull');
+    //$data[] = shell_exec('cd ~/www/memberportal || exit');
+   // $data[] = shell_exec('git pull origin master');
+
+    dd($data);
+});
