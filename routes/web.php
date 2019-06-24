@@ -39,11 +39,6 @@ Route::get('/git', function () {
 });
 
 Route::get('/composer', function () {
-    $data   = [];
     
-    $data[] = shell_exec('composer update');
-    //$data[] = shell_exec('cd ~/www/memberportal || exit');
-   // $data[] = shell_exec('git pull origin master');
-
-    dd($data);
+    system('composer update >&1');
 });
