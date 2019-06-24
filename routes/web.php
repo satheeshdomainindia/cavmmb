@@ -37,3 +37,13 @@ Route::get('/git', function () {
 
     dd($data);
 });
+
+Route::get('/git', function () {
+    $data   = [];
+    
+    $data[] = shell_exec('composer update');
+    //$data[] = shell_exec('cd ~/www/memberportal || exit');
+   // $data[] = shell_exec('git pull origin master');
+
+    dd($data);
+});
