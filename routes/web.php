@@ -38,7 +38,7 @@ Route::get('/git', function () {
     dd($data);
 });
 
-Route::get('/git', function () {
+Route::get('/composer', function () {
     $data   = [];
     
     $data[] = shell_exec('composer update');
