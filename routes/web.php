@@ -40,6 +40,9 @@ Route::get('/git', function () {
 
 Route::get('/composer', function () {
     $data   = [];
-    $data[] =shell_exec('cd .. && export HOME=/home/admin && composer update 2>&1') ; 
+  //  $data[] =shell_exec('cd .. && export HOME=/home/admin && composer update 2>&1') ; 
     dd($data);
 });
+
+Route::get('/redirect', 'SocialAuthGoogleController@redirect');
+Route::get('/callback', 'SocialAuthGoogleController@callback');
